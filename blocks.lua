@@ -33,7 +33,7 @@ for a=1,table.getn(couleurs) do
 		light_source = LIGHT_MAX,
 		groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
 		drop = "bobblocks:"..couleurs[a].."block_off",
-		on_punch = function(pos, node, puncher)
+		on_rightclick = function(pos, node)
 			minetest.add_node(pos, {name = "bobblocks:"..couleurs[a].."block_off"})
 			minetest.sound_play("bobblocks_glassblock",{pos = pos, gain = 1.0, max_hear_distance = 32,})
 		end,
@@ -49,7 +49,7 @@ for a=1,table.getn(couleurs) do
 		tiles = {"bobblocks_"..couleurs[a].."block.png"},
 		is_ground_content = true,
 		groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
-		on_punch = function(pos, node, puncher)
+		on_rightclick = function(pos, node)
 			minetest.add_node(pos, {name = "bobblocks:"..couleurs[a].."block"})
 			minetest.sound_play("bobblocks_glassblock",{pos = pos, gain = 1.0, max_hear_distance = 32,})
 		end,
@@ -70,7 +70,7 @@ for a=1,table.getn(couleurs) do
 		light_source = LIGHT_MAX,
 		groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
 		drop = "bobblocks:"..couleurs[a].."pole_off",
-		on_punch = function(pos, node, puncher)
+		on_rightclick = function(pos, node)
 			minetest.add_node(pos, {name = "bobblocks:"..couleurs[a].."pole_off"})
 			minetest.sound_play("bobblocks_glassblock",{pos = pos, gain = 1.0, max_hear_distance = 32,})
 		end,
@@ -91,7 +91,7 @@ for a=1,table.getn(couleurs) do
 		is_ground_content = true,
 		sounds = default.node_sound_glass_defaults(),
 		groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
-		on_punch = function(pos, node, puncher)
+		on_rightclick = function(pos, node)
 			minetest.add_node(pos, {name = "bobblocks:"..couleurs[a].."pole"})
 			minetest.sound_play("bobblocks_glassblock",{pos = pos, gain = 1.0, max_hear_distance = 32,})
 		end,
